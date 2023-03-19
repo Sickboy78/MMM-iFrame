@@ -12,7 +12,7 @@ Module.register("MMM-iFrame",{
 		defaults: {
                 frameWidth: "300",
 				width:"100%",
-				updateInterval: 0.5 * 60 * 1000,
+				updateInterval: 5 * 60 * 1000,
 				url: ["http://magicmirror.builders/"],
 				scrolling: "no"
 		},
@@ -23,7 +23,7 @@ Module.register("MMM-iFrame",{
                 if (this.config.url.length > 0 ) {
 						setInterval( function () { 
 								_self.updateDom(1000);
-								console.log('update' + count++)
+								//console.log('update' + count++);
                         }, this.config.updateInterval);
                 }
 		},
