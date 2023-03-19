@@ -18,16 +18,16 @@ Module.register("MMM-iFrame",{
 		},
 
         start: function () {
-                self = this;
+                const _self = this;
                 let count = 0;
                 if (this.config.url.length > 0 ) {
 						setInterval( function () { 
-								self.updateDom(1000);
+								_self.updateDom(1000);
 								console.log('update' + count++)
                         }, this.config.updateInterval);
                 }
 		},
-
+		
 		getRandomInt: function (min, max) {
 				return Math.floor(Math.random() * (max - min)) + min;
 		},
